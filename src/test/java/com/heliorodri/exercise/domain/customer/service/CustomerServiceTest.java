@@ -1,4 +1,4 @@
-package com.heliorodri.jumia.exercise.domain.customer.service;
+package com.heliorodri.exercise.domain.customer.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import com.heliorodri.jumia.exercise.api.v1.customer.dto.CustomerDTO;
-import com.heliorodri.jumia.exercise.domain.customer.Customer;
-import com.heliorodri.jumia.exercise.domain.customer.converter.CustomerConverter;
-import com.heliorodri.jumia.exercise.domain.customer.repository.CustomerRepository;
+import com.heliorodri.exercise.api.v1.customer.dto.CustomerDTO;
+import com.heliorodri.exercise.domain.customer.Customer;
+import com.heliorodri.exercise.domain.customer.converter.CustomerConverter;
+import com.heliorodri.exercise.domain.customer.repository.CustomerRepository;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
