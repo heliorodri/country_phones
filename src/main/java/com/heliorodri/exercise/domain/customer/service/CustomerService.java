@@ -1,8 +1,8 @@
-package com.heliorodri.jumia.exercise.domain.customer.service;
+package com.heliorodri.exercise.domain.customer.service;
 
-import com.heliorodri.jumia.exercise.api.v1.customer.dto.CustomerDTO;
-import com.heliorodri.jumia.exercise.domain.customer.converter.CustomerConverter;
-import com.heliorodri.jumia.exercise.domain.customer.repository.CustomerRepository;
+import com.heliorodri.exercise.api.v1.customer.dto.CustomerDTO;
+import com.heliorodri.exercise.domain.customer.converter.CustomerConverter;
+import com.heliorodri.exercise.domain.customer.repository.CustomerRepository;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;

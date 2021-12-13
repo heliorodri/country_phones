@@ -1,8 +1,8 @@
-package com.heliorodri.jumia.exercise.domain.customer.converter;
+package com.heliorodri.exercise.domain.customer.converter;
 
-import com.heliorodri.jumia.exercise.api.v1.customer.dto.CustomerDTO;
-import com.heliorodri.jumia.exercise.domain.customer.Customer;
-import com.heliorodri.jumia.exercise.domain.customer.utils.PhoneConstants;
+import com.heliorodri.exercise.domain.customer.Customer;
+import com.heliorodri.exercise.domain.customer.utils.PhoneConstants;
+import com.heliorodri.exercise.api.v1.customer.dto.CustomerDTO;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

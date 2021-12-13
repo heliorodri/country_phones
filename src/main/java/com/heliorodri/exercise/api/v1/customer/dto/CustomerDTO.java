@@ -1,4 +1,4 @@
-package com.heliorodri.jumia.exercise.api.v1.customer.dto;
+package com.heliorodri.exercise.api.v1.customer.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

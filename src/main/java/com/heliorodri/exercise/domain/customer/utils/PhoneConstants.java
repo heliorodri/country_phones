@@ -1,4 +1,4 @@
-package com.heliorodri.jumia.exercise.domain.customer.utils;
+package com.heliorodri.exercise.domain.customer.utils;
 
 public final class PhoneConstants {
 

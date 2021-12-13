@@ -1,7 +1,7 @@
-package com.heliorodri.jumia.exercise.api.v1.customer;
+package com.heliorodri.exercise.api.v1.customer;
 
-import com.heliorodri.jumia.exercise.api.v1.customer.dto.CustomerDTO;
-import com.heliorodri.jumia.exercise.domain.customer.service.CustomerService;
+import com.heliorodri.exercise.api.v1.customer.dto.CustomerDTO;
+import com.heliorodri.exercise.domain.customer.service.CustomerService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

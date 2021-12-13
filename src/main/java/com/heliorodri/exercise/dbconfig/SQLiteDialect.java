@@ -1,4 +1,4 @@
-package com.heliorodri.jumia.exercise.dbconfig;
+package com.heliorodri.exercise.dbconfig;
 
 import java.sql.Types;
 import org.hibernate.dialect.Dialect;

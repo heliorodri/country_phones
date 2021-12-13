@@ -1,4 +1,4 @@
-package com.heliorodri.jumia.exercise.domain.customer;
+package com.heliorodri.exercise.domain.customer;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
