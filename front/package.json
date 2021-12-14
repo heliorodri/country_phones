@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "rc-table": "^7.21.0"
+  }
+}
