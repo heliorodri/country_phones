@@ -20,7 +20,4 @@ public final class PhoneConstants {
   public static final String MOZAMBIQUE = "MOZAMBIQUE";
   public static final String UGANDA = "UGANDA";
 
-
-
-
 }
