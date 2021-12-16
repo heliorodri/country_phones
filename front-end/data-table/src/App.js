@@ -47,6 +47,7 @@ export default function App() {
                 <div>
                     <input type="radio" value="true" name="valid" onClick={(e) => setValidNumber(e.target.value)}/> Valid Number
                     <input type="radio" value="false" name="valid" onClick={(e) => setValidNumber(e.target.value)}/> Invalid Number
+                    <input type="radio" value="" name="valid" onClick={(e) => setValidNumber(e.target.value)}/> Both
                 </div>
 
                 <Select options={options} onChange={(e) => setCountry(e.value)}/>
