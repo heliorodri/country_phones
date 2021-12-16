@@ -1,70 +1,58 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import Select from 'react-select'
 import Table from './table/Table';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Dropdown from './dropdown/Dropdown';
-import ValidNumber from './valid-number/validNumber';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      customers: [],
-      is_valid_number: '',
-      selected_country: ''
-    }
-  }
+export default function App() {
+    const options = [
+        { value: 'CAMEROON', label: 'Cameroon' },
+        { value: 'ETHIOPIA', label: 'Ethiopia' },
+        { value: 'MOROCCO', label: 'Morocco' },
+        { value: 'MOZAMBIQUE', label: 'Mozambique' },
+        { value: 'UGANDA', label: 'Uganda' }
+    ]
 
-  search() {
+    const [customers, setCustomers] = useState([]);
+    const [validNumber, setValidNumber] = useState('');
+    const [country, setCountry] = useState('');
 
-    var url = "http://localhost:8080/v1/customers";
-    console.log("teste reload")
-    console.log(this.state)
+    function search() {
+        console.log(validNumber);
+        console.log(country);
 
-    if (this.state.selected_country){
-        url = url + "?country=" + this.state.selected_country;
-    }
-
-    if (this.state.is_valid_number){
-      if (this.state.selected_country){
-        url = url + "&validNumber=" + this.state.item[1].value;
-      } else {
-        url = url + "?validNumber=" + this.state.is_valid_number;
-      }
-    }
-
-    console.log(url)
-
+        var url = "http://localhost:8080/v1/customers";
     
-    fetch(url)
-    .then(res => res.json())
-    .then(json => {
-      this.setState({ 'customers': json })
-    })
-  }
+        if (country){
+            url = url + "?country=" + country;
+        }
+    
+        if (validNumber){
+          if (country){
+            url = url + "&validNumber=" + validNumber;
+          } else {
+            url = url + "?validNumber=" + validNumber;
+          }
+        }
+    
+        fetch(url)
+        .then(res => res.json())
+        .then(json => {
+            console.log(json);
+            setCustomers(json);
+        })
+      }
 
-  render() {
     return (
-      <div className="table">
-        <nav className="navbar navbar-light bg-light">
-          <Dropdown 
-            id="countries_dropdown"
-            //onChange={(e) => {this.state.selected_country = e.target.value }}
-            onChange={(e) => {this.setState({ 'is_valid_number': e.target.value })}}
-          />
-          
-          <ValidNumber 
-            id="valid_number_radio"
-            onChange={(e) => {this.state.is_valid_number = e.target.value }}
-          />
+        <div className="table">
+            <nav className="navbar navbar-light bg-light">
+                <div>
+                    <input type="radio" value="true" name="valid" onClick={(e) => setValidNumber(e.target.value)}/> Valid Number
+                    <input type="radio" value="false" name="valid" onClick={(e) => setValidNumber(e.target.value)}/> Invalid Number
+                </div>
 
-          <a className="navbar-brand" href="./">
-          </a>
-        </nav>
-        <button onClick={() => this.search()}>Search</button>;
-        <Table customers={ this.state.customers }/>
-      </div>
+                <Select options={options} onChange={(e) => setCountry(e.value)}/>
+            </nav>
+            <button onClick={() => search()}>Search</button>;
+            <Table customers={ customers }/>
+        </div>
     );
-  }
 }
-
-export default App;
