@@ -52,7 +52,7 @@ export default function App() {
 
                 <Select options={options} onChange={(e) => setCountry(e.value)}/>
             </nav>
-            <button onClick={() => search()}>Search</button>;
+            <button onClick={() => search()}>Search</button>
             <Table customers={ customers }/>
         </div>
     );
