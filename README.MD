@@ -8,7 +8,7 @@
 ## To run the application 
 You should go to the folder you cloned the directory, using the terminal, for example:
 
-    cd temp/app/jumia
+    cd temp/app/phones
 
 
 and type:
