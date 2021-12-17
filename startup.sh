@@ -20,5 +20,5 @@ docker run -d --name jumiaFront -p 3000:3000 --network=host --rm front/jumia
 
 
 echo "###########################################"
-echo "Voce pode acessar a pagina web atraves do seguinte URL: http://localhost:3000"
+echo "You can access the app using this URL: http://localhost:3000"
 echo "###########################################"
