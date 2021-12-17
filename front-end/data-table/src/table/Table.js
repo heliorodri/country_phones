@@ -5,9 +5,9 @@ const Table = ({ customers }) => {
     <table>
       <thead>
         <tr>
-          <th>Name</th>
+          <th style={{textAlign:"left"}}>Name</th>
           <th>Country</th>
-          <th>Valid Number</th>
+          <th>Valid</th>
           <th>Country Code</th>
           <th>Number</th>
         </tr>
@@ -15,10 +15,10 @@ const Table = ({ customers }) => {
       <tbody>
       { (customers.length > 0) ? customers.map( (customer, index) => {
            return (
-            <tr key={ index }>
-              <td>{ customer.name }</td>
+            <tr key={ index } style={{textAlign:"center"}}>
+              <td style={{textAlign:"left"}}>{ customer.name }</td>
               <td>{ customer.country }</td>
-              <td>{ customer.validNumber }</td>
+              <td>{ customer.validNumber.toString() }</td>
               <td>{ customer.countryCode }</td>
               <td>{ customer.number }</td>
             </tr>
