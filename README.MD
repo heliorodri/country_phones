@@ -18,7 +18,7 @@ and type:
 It will start to build and run the containters necessary to put the application up.
 
 ## After the containers are created
-you will se a message like this one:
+you will see a message like this one:
 
 
     ###########################################
